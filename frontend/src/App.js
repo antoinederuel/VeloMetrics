@@ -1,20 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Login from './pages/Login'; // À créer
-import Register from './pages/Register'; // Créé ci-dessus
-import Dashboard from './pages/Dashboard'; // Page privée future
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// NOUVEL IMPORT
+import Navbar from './components/Navbar';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
 
 function App() {
     return (
         <Router>
-            <nav>
-                <Link to="/register">S'inscrire</Link> | <Link to="/login">Se connecter</Link> | <Link to="/dashboard">Dashboard</Link>
-            </nav>
+            {/* Intégration de la Navbar avant les routes */}
+            <Navbar />
+
             <Routes>
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/" element={<h2>Accueil</h2>} />
+                <Route path="/" element={
+                    <div style={{ padding: '20px' }}>
+                        <h2>Bienvenue !</h2>
+                        <p>Veuillez vous inscrire ou vous connecter pour accéder au dashboard.</p>
+                    </div>
+                } />
             </Routes>
         </Router>
     );

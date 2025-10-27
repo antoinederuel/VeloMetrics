@@ -51,7 +51,7 @@ const Register = () => {
                 {/* Icône et Titre */}
                 <LockOpenIcon color="primary" sx={{ fontSize: 40, mb: 1 }} />
                 <Typography component="h1" variant="h5" sx={{ mb: 3 }}>
-                    S'inscrire
+                        Inscription
                 </Typography>
 
                 <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, width: '100%' }}>

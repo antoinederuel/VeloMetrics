@@ -16,7 +16,10 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Importation des Routes d'Authentification
 const authRoutes = require('./routes/auth');
-app.use('/api/auth', authRoutes); // Toutes les routes d'auth commencent par /api/auth
+const userRoutes = require('./routes/user');
+
+app.use('/api/auth', authRoutes);
+app.use('/api/user', userRoutes);// Toutes les routes d'auth commencent par /api/auth
 
 // Démarrage du serveur
 const PORT = process.env.PORT || 5000;
