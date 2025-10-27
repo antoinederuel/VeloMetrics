@@ -1,0 +1,12 @@
+# Dossiers des dépendances Node
+/node_modules
+/backend/node_modules
+/frontend/node_modules
+
+# Fichiers de configuration sensibles
+# Le .env NE DOIT JAMAIS être versionné pour la sécurité !
+/backend/.env
+
+# Fichiers spécifiques au système d'exploitation
+.DS_Store
+npm-debug.log
